@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Вероника Неброева](https://up.htmlacademy.ru/htmlcss/40/user/2513873).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
+* Сайт [Мой проект Седона](https://kleosky.github.io/2513873-sedona-40/).
 
 ---
 
