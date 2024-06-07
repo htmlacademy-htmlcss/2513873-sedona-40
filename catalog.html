@@ -10,7 +10,8 @@
     <header class="page-header">
       <nav class="main-nav">
         <a class="logo" href="index.html">
-          <img class="logo-image" src="#" alt="Логотип сайта Седона">
+          <img class="logo-image" src="images/logo_sedona.svg"
+          width="140" height="70.05" alt="Логотип сайта Седона">
         </a>
         <ul class="nav-list">
           <li class="nav-item">
@@ -85,10 +86,10 @@
           <fieldset>
             <legend>Стоимость, ₽:</legend>
             <label for="cust-from">От
-              <input type="text" name="from" id="cust-from" value="0">
+              <input type="text" name="from" id="cust-from" placeholder="0">
             </label>
             <label for="cust-to">До
-              <input type="text" name="to" id="cust-to" value="9000">
+              <input type="text" name="to" id="cust-to" placeholder="9000">
             </label>
             <p class="visually-hidden">Слайдер прокрутки выбора стоимости</p>
           </fieldset>
@@ -123,7 +124,7 @@
         <ul class="hotel-gallery-list">
           <li class="hotel-gallery-item">
             <a class="image-link" href="#" tabindex="-1">
-              <img src="#" alt="Звёздное небо в горной расщелине">
+              <img src="images/hotel_1.jpg" width="300" height="212" alt="Звёздное небо в горной расщелине">
             </a>
             <h3>
               <a class="hotel-link" href="#" tabindex="-1">Amara Resort & Spa</a>
@@ -139,7 +140,7 @@
           </li>
           <li class="hotel-gallery-item">
             <a class="image-link" href="#" tabindex="-1">
-              <img src="#" alt="Радуга в горах">
+              <img src="images/hotel_2.jpg" width="300" height="212" alt="Радуга в горах">
             </a>
             <h3>
               <a class="hotel-link" href="#" tabindex="-1">Villas at Poco Diablo</a>
@@ -155,7 +156,7 @@
           </li>
           <li class="hotel-gallery-item">
             <a class="image-link" href="#" tabindex="-1">
-              <img src="#" alt="Лес у подножия горной вершины">
+              <img src="images/hotel_3.jpg" width="300" height="212" alt="Лес у подножия горной вершины">
             </a>
             <h3>
               <a class="hotel-link" href="#" tabindex="-1">Desert Quail Inn</a>
@@ -171,7 +172,7 @@
           </li>
           <li class="hotel-gallery-item">
             <a class="image-link" href="#" tabindex="-1">
-              <img src="#" alt="Горная гряда на фоне звёздного неба">
+              <img src="images/hotel_4.jpg" width="300" height="212" alt="Горная гряда на фоне звёздного неба">
             </a>
             <h3>
               <a class="hotel-link" href="#" tabindex="-1">GreenTree Inn</a>
@@ -214,8 +215,9 @@
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label>Ваш e-mail
-            <input type="text" name="email-data" value="Ваш e-mail">
+          <label for="email">
+            <span class="visually-hidden">Ваш e-mail</span>
+            <input type="text" name="email-data" id="email" placeholder="Ваш e-mail">
           </label>
           <button class="button" type="submit">Подписаться</button>
         </form>
@@ -226,17 +228,17 @@
       <ul class="social-list">
         <li class="social-item">
           <a class="social-link" href="#">
-            <img class="social-image" src="#" alt="VKontakte">
+            <span class="visually-hidden">VKontakte</span>
           </a>
         </li>
         <li class="social-item">
           <a class="social-link" href="#">
-            <img class="social-image" src="#" alt="Twitter">
+            <span class="visually-hidden">Twitter</span>
           </a>
         </li>
         <li class="social-item">
           <a class="social-link" href="#">
-            <img class="social-image" src="#" alt="Youtube">
+            <span class="visually-hidden">Youtube</span>
           </a>
         </li>
       </ul>
@@ -244,7 +246,8 @@
         <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
       <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img class="developer-image" src="#" alt="Логотип htmlacademy">
+        <img class="developer-image" src="images/logo_developer.svg"
+        width="114.9" height="32.9" alt="Логотип htmlacademy">
       </a>
     </footer>
   </body>
