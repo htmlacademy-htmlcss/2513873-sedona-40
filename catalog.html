@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link href="styles/style.css" rel="stylesheet">
+</head>
 
-  <body class="page-catalog">
+<body class="page-catalog">
+  <div class="page-container">
     <header class="page-header">
       <nav class="main-nav">
         <a class="logo" href="index.html">
-          <img class="logo-image" src="images/logo_sedona.svg"
-          width="140" height="70.05" alt="Логотип сайта Седона">
+          <img class="logo-image" src="images/logo_sedona.svg" width="140" height="70.05" alt="Логотип сайта Седона">
         </a>
         <ul class="nav-list">
           <li class="nav-item">
@@ -39,9 +40,11 @@
         <a class="button want-here" href="#">Хочу сюда</a>
       </nav>
     </header>
+  </div>
+  <div class="page-container">
     <main class="catalog-main">
       <div class="filter-wrapper">
-        <h1>Гостиницы Седоны</h1>
+        <h1 class="catalog-title">Гостиницы Седоны</h1>
         <ul class="breadcrubs">
           <li class="breadcrubs-item">
             <a class="home-page" href="index.html">
@@ -85,16 +88,16 @@
           </fieldset>
           <fieldset>
             <legend>Стоимость, ₽:</legend>
-            <label for="cust-from">От
+            <label class="cust" for="cust-from">От
               <input type="text" name="from" id="cust-from" placeholder="0">
             </label>
-            <label for="cust-to">До
+            <label class="cust" for="cust-to">До
               <input type="text" name="to" id="cust-to" placeholder="9000">
             </label>
             <p class="visually-hidden">Слайдер прокрутки выбора стоимости</p>
           </fieldset>
-          <button type="submit">Применить</button>
-          <button type="reset">Сбросить</button>
+          <button class="button filter-form-apply" type="submit">Применить</button>
+          <button class="button filter-form-reset" type="reset">Сбросить</button>
         </form>
       </div>
       <section class="hotel-sorting">
@@ -132,7 +135,7 @@
             <p>Гостиница</p>
             <p>От 4000 ₽</p>
             <a class="button details" href="#">Подробнее</a>
-            <button class="button" type="button">В избранное</button>
+            <button class="button favority-button" type="button">В избранное</button>
             <p class="stars stars-4">
               <span class="visually-hidden">Комфортность четыре звезды</span>
             </p>
@@ -164,7 +167,7 @@
             <p>Гостиница</p>
             <p>От 2500 ₽</p>
             <a class="button details" href="#">Подробнее</a>
-            <button class="button" type="button">В избранное</button>
+            <button class="button favority-button" type="button">В избранное</button>
             <p class="stars stars-3">
               <span class="visually-hidden">Комфортность три звезды</span>
             </p>
@@ -180,7 +183,7 @@
             <p>Гостиница</p>
             <p>От 1500 ₽</p>
             <a class="button details" href="#">Подробнее</a>
-            <button class="button" type="button">В избранное</button>
+            <button class="button favority-button" type="button">В избранное</button>
             <p class="stars stars-2">
               <span class="visually-hidden">Комфортность две звезды</span>
             </p>
@@ -204,14 +207,14 @@
             <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">...</a>
+            <a class="pagination-link ellipsis" href="#">...</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
       </section>
-      <section class="subscribe">
+      <section class="subscribe-catalog">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -219,10 +222,12 @@
             <span class="visually-hidden">Ваш e-mail</span>
             <input type="text" name="email-data" id="email" placeholder="Ваш e-mail">
           </label>
-          <button class="button" type="submit">Подписаться</button>
+          <button class="button subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
+  </div>
+  <div class="page-container">
     <footer class="page-footer">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
       <ul class="social-list">
@@ -246,10 +251,11 @@
         <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
       <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img class="developer-image" src="images/logo_developer.svg"
-        width="114.9" height="32.9" alt="Логотип htmlacademy">
+        <img class="developer-image" src="images/logo_developer.svg" width="114.9" height="32.9"
+          alt="Логотип htmlacademy">
       </a>
     </footer>
-  </body>
+  </div>
+</body>
 
 </html>
