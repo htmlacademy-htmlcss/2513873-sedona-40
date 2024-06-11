@@ -32,18 +32,15 @@ body {
 }
 
 .hero {
-  position: relative;
   background-color: #a4cbe3;
   background-image: url(../images/background_mask.svg), url(../images/background_hero.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 100%, 50% 50%;
-  /* background-size: 1200px 57px, 1200px 485px; */
-  background-size: 100%, 100% 100%;
+  background-size: contain, cover;
 }
 
 .hero img {
-  display: block;
-  margin: 0 auto;
+  margin: 51px 371px 82px 371px;
 }
 
 .subscribe {
@@ -51,7 +48,7 @@ body {
   background-image: url(../images/background_subscribe.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 100% 100%;
+  background-size: cover;
   background-color: #a4cbe3;
   padding-left: 258px;
   padding-top: 86px;
@@ -68,7 +65,7 @@ body {
   background-image: url(../images/background_filter.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 100% 100%;
+  background-size: cover;
   background-color: #71a2bf;
 }
 
@@ -93,7 +90,7 @@ body {
   border: none;
 }
 
-input {
+.subscribe-form input, .cust input {
   font-family: inherit;
   font-weight: inherit;
   font-size: 18px;
@@ -116,7 +113,8 @@ input {
   background-color: #7DB54F;
 }
 
-a {
+.main-nav a, .hotels a, .social-item a, .contacts a, .breadcrubs a,
+.hotel-view-item a, .hotel-gallery-item a, .pagination-link {
   color: #000000;
   text-decoration: none;
 }
@@ -127,20 +125,22 @@ a {
   line-height: 24px;
 }
 
-h2 {
+.advantages-title h2, .services-title h2, .hotels h2, .subscribe h2, .page-footer h2
+.hotel-sorting h2, .pagination h2, .subscribe-catalog h2 {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
-h3 {
+.advantages-item h3, .services-item h3, .hotel-gallery-item h3 {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
 }
 
-p {
+.advantages p, .services p, .hotels p, .subscribe p,
+.hotel-filter-form p, .hotel-gallery-item p, .subscribe-catalog p {
   color: #333333;
   font-size: 18px;
   line-height: 21px;
@@ -217,7 +217,7 @@ p {
   border: none;
 }
 
-select {
+.hotel-sorting select {
   color: #333333;
   font-family: inherit;
   font-weight: 400;
