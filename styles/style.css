@@ -24,6 +24,9 @@ body {
   font-size: 22px;
   line-height: 26px;
   background-color: #F2F2F2;
+  margin-left: 40px;
+  margin-right: 40px;
+  box-shadow: 0 0 15px #000000;
 }
 
 .page-container {
@@ -101,8 +104,9 @@ body {
   font-weight: 700;
 }
 
-.want-here, .details {
+.main-nav .want-here, .hotel-gallery-item .details {
   background-color: #756157;
+  color: #FFFFFF;
 }
 
 .favority-button {
@@ -125,6 +129,19 @@ body {
   line-height: 24px;
 }
 
+.like-number {
+  font-size: 10px;
+  line-height: 10px;
+  background-color: #7DB54F;
+  color: #FFFFFF;
+  border-radius: 50%;
+  text-align: center;
+  padding-left: 4px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
 .advantages-title h2, .services-title h2, .hotels h2, .subscribe h2, .page-footer h2
 .hotel-sorting h2, .pagination h2, .subscribe-catalog h2 {
   font-weight: 700;
@@ -142,6 +159,11 @@ body {
 .advantages p, .services p, .hotels p, .subscribe p,
 .hotel-filter-form p, .hotel-gallery-item p, .subscribe-catalog p {
   color: #333333;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.advantages-item .advantages-description, .services-item .services-description {
   font-size: 18px;
   line-height: 21px;
 }
@@ -150,11 +172,7 @@ body {
   color: #FFFFFF;
 }
 
-.services-list p, .subscribe-catalog p {
-  color: #333333;
-}
-
-.search-hotel {
+.hotels .search-hotel {
   background-color: #756157;
   color: #FFFFFF;
   font-weight: 700;
@@ -169,6 +187,7 @@ body {
   font-size: 20px;
   line-height: 36px;
   border: none;
+  text-transform: uppercase;
 }
 
 .phone-number {
@@ -182,6 +201,10 @@ body {
   line-height: 78px;
 }
 
+.home-page span {
+  font-size: 16px;
+  line-height: 21px;
+}
 .hotel-filter-form legend {
   font-weight: 700;
   font-size: 20px;
