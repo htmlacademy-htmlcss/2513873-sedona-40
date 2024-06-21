@@ -65,7 +65,6 @@ body {
   padding: 96px 258px 104px 258px;
 }
 
-.subscribe h2
 .subscribe form {
   text-align: center;
 }
@@ -237,6 +236,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
 }
 
 .advantages-item h3,
@@ -511,10 +511,11 @@ body {
 }
 
 .search-link {
+  display: block;
   background-image: url(../images/icons/search_icon.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  padding: 24px 13px 23px 14px;
+  padding: 22px 12px 22px 12px;
 }
 
 .favority-link {
@@ -523,7 +524,6 @@ body {
   background-position: 50% 50%;
   padding: 22px 12px 22px 12px;
 }
-
 
 .user-menu-item {
   width: 44px;
@@ -551,12 +551,6 @@ body {
   text-align: center;
 }
 
-.page-home {
-  background-image: url(../images/icons/home_icon.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
 .hero img {
   margin: 51px 371px 82px 371px;
 }
@@ -574,6 +568,7 @@ body {
   margin-top: 25px;
   margin-bottom: 90px;
 }
+
 .advantages-list {
   display: flex;
   flex-direction: column;
@@ -666,25 +661,23 @@ body {
   margin: 0 85px 81px 85px;
 }
 
-/* ИКОНКИ СЕРВИСА
-
 .housing {
   background-image: url(../images/icons/housing.svg);
   background-repeat: no-repeat;
-  background-position: 50% 0%;
+  background-position: 50% 25%;
 }
 
 .food {
   background-image: url(../images/icons/food.svg);
   background-repeat: no-repeat;
-  background-position: 50% 0%;
+  background-position: 50% 25%;
 }
 
 .gifts {
   background-image: url(../images/icons/gifts.svg);
   background-repeat: no-repeat;
-  background-position: 50% 0%;
-} */
+  background-position: 50% 25%;
+}
 
 .hotels {
   padding: 96px 304px;
@@ -715,10 +708,24 @@ body {
 
 .breadcrubs-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   margin: 8px 0 40px 0;
   padding: 0;
-  padding-left: 70px;
+}
+
+.breadcrubs-list .page-home {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/icons/home_icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding: 4px 0 0 1px;
+}
+
+.item-home {
+  margin-right: 11px;
 }
 
 .hotel-filter-form fieldset {
@@ -783,6 +790,14 @@ body {
   box-sizing: border-box;
 }
 
+.input-cost-from {
+  border-radius: 4px 0 0 4px;
+}
+
+.input-cost-to {
+  border-radius: 0 4px 4px 0;
+}
+
 .cost {
   margin: 0;
   padding: 0;
@@ -796,20 +811,24 @@ body {
 
 .cost-select-wrapper {
   display: flex;
+  align-items: center;
   margin: 0 70px 40px 70px;
 }
 
 .cost-select-wrapper h2 {
-  padding: 6px 0 6px 0;
-  margin-right: 200px;
+  padding: 7px 0 7px 0;
+  margin: 0;
+  margin-right: auto;
+  text-transform: uppercase;
 }
 
 .cost-select-wrapper select {
   display: block;
   width: 292px;
-  /* padding: 14px 20px 14px 20px; */
+  padding: 14px 0 14px 20px;
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
+  margin-right: 70px;
 }
 
 .cost-select-wrapper option {
@@ -817,24 +836,46 @@ body {
   margin: 0;
 }
 
-/* ИКОНКИ ИЗМЕНЕНИЯ ВИДА ПРОСМОТРА СТРАНИЦЫ
+.hotel-view-list {
+  display: flex;
+  gap: 10px;
+}
+
 .hotel-view-item .tile {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 4px;
   background-image: url(../images/icons/tile_icon.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  padding: 14px, 12px, 14px, 12px;
 }
 
 .hotel-view-item .card {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
   background-image: url(../images/icons/cadr_icon.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  padding: 14px, 12px, 14px, 12px;
 }
 
 .hotel-view-item .list {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
   background-image: url(../images/icons/list_icon.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-} */
+  padding: 14px, 12px, 14px, 12px;
+}
 
 .hotel-gallery-list {
   display: flex;
