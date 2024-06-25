@@ -118,14 +118,12 @@ body {
   line-height: 21px;
 }
 
-.advantages-background-one,
-.advantages-background-two {
+.advantages-background {
   background-color: rgba(130, 179, 211, 1);
   color: rgba(255, 255, 255, 1);
 }
 
-.advantages-background-one img,
-.advantages-background-two img {
+.advantages-background {
   display: block;
   margin: 0;
 }
@@ -229,7 +227,7 @@ body {
   box-sizing: border-box;
 }
 
-.advantages-title h2,
+.advantages h2,
 .services-title h2,
 .hotels h2,
 .subscribe h2,
@@ -246,7 +244,6 @@ body {
 }
 
 .advantages-item h3,
-.center-advantages-item h3,
 .services-item h3,
 .hotel-gallery-item h3 {
   font-size: 24px;
@@ -255,7 +252,7 @@ body {
   text-align: center;
 }
 
-.advantages-title p,
+.advantages p,
 .services-title p,
 .hotels p {
   color: rgba(51, 51, 51, 1);
@@ -265,8 +262,7 @@ body {
 }
 
 .advantages-item,
-.center-advantages-item,
-.advantages-description,
+.advantages-item .advantages-description,
 .services-item .services-description {
   display: block;
   font-size: 18px;
@@ -274,8 +270,7 @@ body {
 }
 
 .subscribe p,
-.advantages-background-one p,
-.advantages-background-two p,
+.advantages-background p,
 .filter-wrapper p,
 .filter-wrapper span {
   color: rgba(255, 255, 255, 1);
@@ -466,7 +461,6 @@ body {
 .nav-list,
 .user-menu-list,
 .advantages-list,
-.center-advantages-list,
 .services-list,
 .social-list,
 .breadcrubs-list,
@@ -569,30 +563,36 @@ body {
   padding: 0;
 }
 
-.advantages-title {
-  padding-bottom: 44px;
-}
-
-.advantages-title h2 {
+.advantages h2 {
   margin: 69px 290px 25px 290px;
 }
 
-.advantages-title p {
+.advantages .advantages-main-description {
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 69px;
 }
 
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  margin-top: 21px;
 }
 
-.advantages-background-one {
+.advantages-background {
   display: flex;
 }
 
-.advantages-item-wrapper {
+/*
+.advantages-title {
+  padding-bottom: 44px;
+}
+
+.advantages-title p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+} */
+
+/* .advantages-item-wrapper {
   width: 230px;
   margin: 0;
   padding: 102px 85px;
@@ -609,8 +609,8 @@ body {
   margin-top: 62px;
   padding: 0;
   text-align: center;
-}
-
+} */
+/*
 .center-advantages-list {
   display: flex;
   flex-wrap: wrap;
@@ -636,12 +636,13 @@ body {
   margin-top: 62px;
   padding: 0;
   text-align: center;
-}
+} */
 
-.advantages-background-two {
+/* .advantages-background-two {
   display: flex;
+  flex-grow: 1;
   flex-direction: row-reverse;
-}
+} */
 
 .services-title {
   margin: 0;
