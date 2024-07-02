@@ -946,6 +946,7 @@ body {
 }
 
 .social-link {
+  position: relative;
   display: block;
   min-width: 47px;
   min-height: 40px;
@@ -954,15 +955,32 @@ body {
   background-position: 50% 50%;
 }
 
-.vk {
+.vk::before, .twitter::before, .youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  left: 12px;
+  top: 12px;
+}
+
+.vk::before {
+  width: 24px;
+  height: 14px;
   background-image: url(../images/icons/vk_icon.svg);
 }
 
-.twitter {
+.twitter::before {
+  width: 18px;
+  height: 15px;
   background-image: url(../images/icons/twitter_icon.svg);
+
 }
 
-.youtube {
+.youtube::before {
+  width: 22px;
+  height: 17px;
   background-image: url(../images/icons/youtube_icon.svg);
 }
 
