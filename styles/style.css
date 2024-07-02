@@ -116,10 +116,9 @@ body {
   line-height: 21px;
 }
 
-.advantages-background {
+.advantages-background, .advantages-background-revers {
   background-color: rgba(130, 179, 211, 1);
   color: rgba(255, 255, 255, 1);
-  display: block;
   margin: 0;
 }
 
@@ -138,9 +137,9 @@ body {
 }
 
 .details, .favority-button, .current-favority {
-  width: 140px;
+  max-width: 140px;
   display: block;
-  padding: 8px 0;
+  padding: 8px 12px;
   color: rgba(255, 255, 255, 1);
   border-radius: 4px;
   font-family: inherit;
@@ -151,6 +150,7 @@ body {
   border: none;
   box-sizing: border-box;
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 .details{
@@ -182,21 +182,6 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-}
-
-.like-number-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
-  font-size: 10px;
-  line-height: 10px;
-  background-color: rgba(125, 181, 79, 1);
-  color: rgba(255, 255, 255, 1);
-  border-radius: 50%;
-  padding: 5px 5px 5px 4px;
-  margin: 0 4px 0 20px;
-  text-decoration: none;
-  box-sizing: border-box;
 }
 
 .advantages h2,
@@ -252,7 +237,6 @@ body {
 }
 
 .subscribe p,
-.advantages-background p,
 .filter-wrapper p,
 .filter-wrapper span {
   color: rgba(255, 255, 255, 1);
@@ -393,15 +377,6 @@ body {
   padding: 0;
 }
 
-.pagination-item {
-  width: 60px;
-  height: 60px;
-  background-color: rgba(130, 179, 211, 1);
-  border-radius: 4px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
 .current-pagination,
 .pagination-item .current-pagination-link {
   background-color: rgba(242, 242, 242, 1);
@@ -419,15 +394,18 @@ body {
 }
 
 .pagination-link {
-  display: block;
-  width: 60px;
-  height: 60px;
-  color: rgba(255, 255, 255, 1);
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  text-align: center;
-  padding: 12px 19px 13px 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  height: 60px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(130, 179, 211, 1);
+  border-radius: 4px;
+  padding: 12px 10px;
   box-sizing: border-box;
 }
 
@@ -495,6 +473,25 @@ body {
 .favority-link {
   background-image: url(../images/icons/heart_icon.svg);
   text-decoration: none;
+  position: relative;
+}
+
+.like-number-icon {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 10px;
+  background-color: rgba(125, 181, 79, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  padding: 5px 5px 5px 4px;
+  /* margin: 0 4px 0 20px; */
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .user-menu-item {
@@ -557,8 +554,17 @@ body {
   grid-template-columns: 1fr 2fr;
 }
 
-.revers img {
+.advantages-background-revers {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+}
+.advantages-background-revers img {
   order: -1;
+}
+
+.advantages-background img {
+  min-width: 100%;
 }
 
 .background-title {
@@ -573,9 +579,30 @@ body {
 }
 
 .background-title h3, .opacity-12 h3, .opacity-20 h3 {
+  position: relative;
   margin: 0;
   margin-bottom: 31px;
   padding: 0 27.5px 0 27.5px;
+}
+
+.background-title h3::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  width: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  top: 85px;
+  right: 83px;
+}
+
+.opacity-12 h3::after, .opacity-20 h3::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  width: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  top: 85px;
+  right: 83px;
 }
 
 .background-title p, .opacity-12 p, .opacity-20 p {
@@ -673,6 +700,7 @@ body {
 }
 
 .page-home {
+  position: relative;
   display: block;
   width: 13px;
   height: 15px;
@@ -682,6 +710,20 @@ body {
   padding: 0 0 2px 0;
   margin: 3px 0;
   box-sizing: border-box;
+}
+
+.page-home::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid rgba(255, 255, 255, 1);
+  border-right: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 1px;
+  left: 23px;
+  top: 4px;
+  transform: rotate(45deg);
 }
 
 .item-home {
@@ -749,6 +791,7 @@ body {
 }
 
 .cost-input-wrapper input {
+  position: relative;
   background-color: rgba(242, 242, 242, 1);
   width: 143px;
   border: none;
@@ -759,6 +802,24 @@ body {
 .input-cost-from {
   border-radius: 4px 0 0 4px;
 }
+
+/* .input-cost-from ::placeholder::after {
+  content: "от";
+  position: absolute;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.75);
+  border: 10px dashed red;
+} */
+
+/* .input-cost-from::before {
+  content: "от";
+  position: absolute;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.75);
+  border: 10px dashed red;
+} */
 
 .input-cost-to {
   border-radius: 0 4px 4px 0;
@@ -805,7 +866,6 @@ body {
 
 .hotel-view-list {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -838,14 +898,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: flex-start;
   margin: 0 70px 40px 70px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(230, 230, 230, 1);
 }
 
 .hotel-gallery-item {
-  width: 340px;
+  min-width: 340px;
   padding: 20px;
   box-sizing: border-box;
   display: grid;
@@ -854,7 +913,6 @@ body {
   gap: 16px 20px;
   border-radius: 4px;
   box-shadow: 0 0 0 1px rgba(230, 230, 230, 1);
-
 }
 
 .image-link {
