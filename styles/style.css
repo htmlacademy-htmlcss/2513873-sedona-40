@@ -57,6 +57,7 @@ body {
   background-position: 50% 100%, 50% 50%;
   background-size: contain, cover;
   margin: 0;
+  margin-top: -6px;
   padding: 51px 371px 82px 371px;
   box-sizing: border-box;
 }
@@ -296,16 +297,18 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-.subscribe-button:hover, .filter-form-apply:hover, .favority-button:hover, .pagination-link:hover {
-  background-color: rgba(104, 162, 202, 1);
-}
-
+.subscribe-button:hover, .filter-form-apply:hover, .favority-button:hover, .pagination-link:hover,
 .subscribe-button:focus, .filter-form-apply:focus, .favority-button:focus, .pagination-link:focus {
   background-color: rgba(104, 162, 202, 1);
 }
 
 .subscribe-button:active, .filter-form-apply:active, .favority-button:active, .pagination-link:active {
   background-color: rgba(130, 179, 211, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-link:hover, .pagination-link:focus {
+  border: 1px solid rgba(130, 179, 211, 1);
 }
 
 .phone-number {
@@ -370,10 +373,10 @@ body {
 }
 
 .filter-form-reset:active {
-  color: rgba(255, 255, 255, 0.3);
+  opacity: 0.3;
 }
 
-.hotel-sorting select {
+.cost-select-wrapper select {
   color: rgba(51, 51, 51, 1);
   font-family: inherit;
   font-weight: 400;
@@ -452,7 +455,6 @@ body {
 }
 
 .main-nav {
-  max-height: 64px;
   margin: 0 70px 0 70px;
   display: flex;
   gap: 30px;
@@ -530,6 +532,7 @@ body {
 
 .like-number-icon:active, .current-favority:active {
   background-color: rgba(125, 181, 79, 1);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .user-menu-item {
@@ -561,6 +564,11 @@ body {
 
 .want-here-button:active, .search-hotel:active, .details:active {
   background-color: rgba(117, 97, 87, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.want-here:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .want-here-button:disabled, .search-hotel:disabled, .details:disabled,
@@ -918,9 +926,20 @@ body {
   border-radius: 4px;
 }
 
-.cost-select-wrapper option {
-  padding: 0;
-  margin: 0;
+.cost-select-wrapper select:hover {
+  border: 2px solid rgba(104, 162, 202, 1);
+  border-radius: 4px;
+}
+
+.cost-select-wrapper select:focus {
+  border: 2px solid rgba(104, 162, 202, 1);
+  border-radius: 4px;
+}
+
+.cost-select-wrapper select:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .hotel-view-list {
@@ -1012,7 +1031,7 @@ body {
   box-sizing: border-box;
 }
 
-.vk::before, .twitter::before, .youtube::before {
+.social-link::before {
   content: "";
   display: block;
   position: absolute;
@@ -1020,12 +1039,14 @@ body {
   background-position: 50% 50%;
   left: 12px;
   top: 12px;
+  color: rgba(131, 179, 211, 1);
 }
 
 .vk::before {
   width: 24px;
   height: 14px;
   background-image: url(../images/icons/vk_icon.svg);
+  z-index: -1;
 }
 
 .twitter::before {
@@ -1039,6 +1060,15 @@ body {
   width: 22px;
   height: 17px;
   background-image: url(../images/icons/youtube_icon.svg);
+}
+
+.vk:hover {
+  width: 24px;
+  height: 14px;
+  background-image: url(../images/icons/vk_icon_hover.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: red;
 }
 
 .footer-wrapper {
@@ -1108,4 +1138,46 @@ body {
 .control-input-radio:checked {
   background-image: url(../images/icons/tick.svg);
   background-size: 10px 10px;
+}
+
+.control-input:hover, .control-input-radio:hover,
+.control-input:checked:hover, .control-input-radio:checked:hover {
+  opacity: 0.6;
+}
+
+.control-input:focus, .control-input-radio:focus,
+.control-input:checked:focus, .control-input-radio:checked:focus {
+  border: 3px solid rgba(131, 179, 211, 1);
+}
+.control-input:active, .control-input-radio:active,
+.control-input:checked:active, .control-input-radio:checked:active {
+  opacity: 0.3;
+}
+
+.infrastructure label:hover, .living-type label:hover {
+  opacity: 0.6;
+}
+
+.infrastructure label:active, .living-type label:active {
+  opacity: 0.3;
+}
+
+.phone-number:hover, .developer-link img:hover {
+  color: rgba(117, 97, 87, 1);
+}
+
+.phone-number:focus {
+  color: rgba(117, 97, 87, 1);
+}
+
+.phone-number:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.view:hover, .view:active {
+  border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.view:focus {
+  border: 2px solid rgba(104, 162, 202, 1);
 }
