@@ -328,10 +328,6 @@ body {
   border: 1px solid rgba(130, 179, 211, 1);
 }
 
-.pagination-link:focus-visible {
-  border: 1px solid rgba(130, 179, 211, 1);
-}
-
 .phone-number {
   font-size: 40px;
   line-height: 40px;
@@ -360,6 +356,7 @@ body {
 
 .filter-form-apply, .filter-form-reset {
   width: 191px;
+  max-height: 36px;
   color: rgba(255, 255, 255, 1);
   border: transparent;
   padding: 8px;
@@ -385,11 +382,6 @@ body {
 
 .filter-form-reset:hover {
   opacity: 0.6;
-}
-
-.filter-form-reset:focus-visible {
-  border: 3px solid rgba(131, 179, 211, 1);
-  border-radius: 4px;
 }
 
 .filter-form-reset:active {
@@ -769,6 +761,14 @@ body {
   box-sizing: border-box;
 }
 
+.subscribe-form input:hover {
+  background-color: rgba(230, 230, 230, 1);
+}
+
+.subscribe-form input:focus-visible {
+  background-color: rgba(230, 230, 230, 1);
+}
+
 .breadcrumbs-list {
   display: flex;
   justify-content: flex-start;
@@ -806,6 +806,14 @@ body {
   width: 7px;
   height: 10px;
   top: 1px;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-filter-form fieldset {
@@ -870,6 +878,7 @@ body {
   position: relative;
   background-color: rgba(242, 242, 242, 1);
   width: 143px;
+  max-height: 48px;
   border: none;
   margin: 0;
   box-sizing: border-box;
@@ -881,15 +890,6 @@ body {
 
 .cost-input-wrapper input:focus-visible {
   background-color: rgba(230, 230, 230, 1);
-  border: 3px solid rgba(131, 179, 211, 1);
-}
-
-.input-cost-from, .input-cost-from:focus-visible {
-  border-radius: 4px 0 0 4px;
-}
-
-.input-cost-to, .input-cost-to:focus-visible {
-  border-radius: 0 4px 4px 0;
 }
 
 .cost {
@@ -927,11 +927,6 @@ body {
 }
 
 .cost-select-wrapper select:hover {
-  border: 2px solid rgba(104, 162, 202, 1);
-  border-radius: 4px;
-}
-
-.cost-select-wrapper select:focus-visible {
   border: 2px solid rgba(104, 162, 202, 1);
   border-radius: 4px;
 }
@@ -1152,15 +1147,15 @@ body {
   opacity: 0.3;
 }
 
-.phone-number:hover, .developer-link img:hover {
+.phone-number:hover, .nav-link:hover, .developer-link img:hover {
   color: rgba(117, 97, 87, 1);
 }
 
-.phone-number:focus {
+.phone-number:focus, .nav-link:focus {
   color: rgba(117, 97, 87, 1);
 }
 
-.phone-number:active {
+.phone-number:active, .nav-link:active {
   color: rgba(117, 97, 87, 0.3);
 }
 
