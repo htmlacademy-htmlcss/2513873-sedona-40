@@ -773,7 +773,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 11px;
+  gap: 29px;
   margin: 8px 0 40px 0;
   padding: 0;
 }
@@ -796,16 +796,17 @@ body {
   gap: 11px;
 }
 
-.breadcrumbs-item:not(:last-child)::after {
+.breadcrumbs-list:not(:last-child) li:not(:last-child) a::after {
   content: "";
-  display: block;
+  display: inline-block;
   position: relative;
   background-image: url(../images/icons/breadcrumbs.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 7px;
   height: 10px;
-  top: 1px;
+  bottom: 3.4px;
+  left: 24px;
 }
 
 .breadcrumbs-link:hover {
