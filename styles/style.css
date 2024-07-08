@@ -77,6 +77,7 @@ body {
   background-color: rgba(164, 203, 227, 1);
   margin: 0;
   padding: 96px 258px 104px 258px;
+
 }
 
 .subscribe form {
@@ -640,7 +641,7 @@ body {
   order: -1;
 }
 
-.advantages-background img {
+.advantages-background img, .advantages-background-revers img {
   min-width: 100%;
 }
 
@@ -773,7 +774,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 29px;
+  gap: 11px;
   margin: 8px 0 40px 0;
   padding: 0;
 }
@@ -796,17 +797,14 @@ body {
   gap: 11px;
 }
 
-.breadcrumbs-list:not(:last-child) li:not(:last-child) a::after {
+.breadcrumbs-item:not(:last-child)::after {
   content: "";
-  display: inline-block;
-  position: relative;
+  display: block;
   background-image: url(../images/icons/breadcrumbs.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 7px;
   height: 10px;
-  bottom: 3.4px;
-  left: 24px;
 }
 
 .breadcrumbs-link:hover {
