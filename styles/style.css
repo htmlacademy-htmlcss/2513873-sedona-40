@@ -143,7 +143,7 @@ body {
 .cost input {
   color: rgba(0, 0, 0, 1);
   font-weight: 700;
-  padding: 12px 0 12px 20px;
+  padding: 12px 20px;
 }
 
 .details, .favority-button, .current-favority {
@@ -315,17 +315,20 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-.subscribe-button:hover, .filter-form-apply:hover, .favority-button:hover, .pagination-link:hover,
-.subscribe-button:focus, .filter-form-apply:focus, .favority-button:focus, .pagination-link:focus {
+.subscribe-button:hover, .filter-form-apply:hover, .favority-button:hover,
+.pagination-link:not(.current-pagination-link):not(.ellipsis-link):hover, .subscribe-button:focus-visible,
+.filter-form-apply:focus-visible, .favority-button:focus-visible,
+.pagination-link:not(.current-pagination-link):focus-visible {
   background-color: rgba(104, 162, 202, 1);
 }
 
-.subscribe-button:active, .filter-form-apply:active, .favority-button:active, .pagination-link:active {
+.subscribe-button:active, .filter-form-apply:active, .favority-button:active,
+.pagination-link:not(.current-pagination-link):not(.ellipsis-link):active {
   background-color: rgba(130, 179, 211, 1);
   color: rgba(255, 255, 255, 0.3);
 }
 
-.pagination-link:hover {
+.pagination-link:not(.current-pagination-link):hover {
   border: 1px solid rgba(130, 179, 211, 1);
 }
 
@@ -357,7 +360,6 @@ body {
 
 .filter-form-apply, .filter-form-reset {
   width: 191px;
-  max-height: 36px;
   color: rgba(255, 255, 255, 1);
   border: transparent;
   padding: 8px;
@@ -522,13 +524,13 @@ body {
   top: 12px;
   left: 20px;
   display: block;
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   font-size: 10px;
   line-height: 10px;
   background-color: rgba(125, 181, 79, 1);
   color: rgba(255, 255, 255, 1);
-  border-radius: 50%;
+  border-radius: 100vh;
   padding: 5px 5px 5px 4px;
   /* margin: 0 4px 0 20px; */
   text-decoration: none;
@@ -659,7 +661,7 @@ body {
 
 .background-title h3, .opacity-12 h3, .opacity-20 h3 {
   margin: 0;
-  padding: 0 27.5px 0 27.5px;
+  padding: 0 27px 0 27px;
 }
 
 .background-title h3::after {
@@ -805,6 +807,7 @@ body {
   background-position: 50% 50%;
   width: 7px;
   height: 10px;
+  margin-top: 1px;
 }
 
 .breadcrumbs-link:hover {
@@ -883,6 +886,16 @@ body {
   box-sizing: border-box;
 }
 
+.input-cost-from {
+  width: 143px;
+  border-radius: 4px 0 0 4px;
+}
+
+.input-cost-to {
+  width: 143px;
+  border-radius: 0 4px 4px 0;
+}
+
 .cost-input-wrapper input:hover {
   background-color: rgba(230, 230, 230, 1);
 }
@@ -908,6 +921,7 @@ body {
   align-items: center;
   margin: 0 70px 40px 70px;
   gap: 70px;
+  box-sizing: border-box;
 }
 
 .cost-select-wrapper h2 {
@@ -919,10 +933,14 @@ body {
 
 .cost-select-wrapper select {
   display: block;
-  width: 292px;
-  padding: 14px 20px;
+  min-width: 292px;
+  padding: 12px 60px 12px 20px;
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
+  background-image: url(../images/icons/select_icon.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px top 21px;
+  appearance: none;
 }
 
 .cost-select-wrapper select:hover {
@@ -948,10 +966,10 @@ body {
   border-radius: 4px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  padding: 14px, 12px, 14px, 12px;
+  box-sizing: border-box;
 }
 
-.tile{
+.tile {
   border: 2px solid rgba(0, 0, 0, 1);
   background-image: url(../images/icons/tile_icon.svg);
 }
@@ -1029,38 +1047,38 @@ body {
 .social-link::before {
   content: "";
   display: block;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  color: rgba(131, 179, 211, 1);
+  background-color: rgba(131, 179, 211, 1);
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
 }
 
 .vk::before {
   width: 24px;
   height: 14px;
-  background-image: url(../images/icons/vk_icon.svg);
-  z-index: -1;
+  mask-size: 24px 14px;
+  mask-image: url(../images/icons/vk_icon.svg);
 }
 
 .twitter::before {
   width: 18px;
   height: 15px;
-  background-image: url(../images/icons/twitter_icon.svg);
-
+  mask-size: 18px 15px;
+  mask-image: url(../images/icons/twitter_icon.svg);
 }
 
 .youtube::before {
   width: 22px;
   height: 17px;
-  background-image: url(../images/icons/youtube_icon.svg);
+  mask-size: 22px 17px;
+  mask-image: url(../images/icons/youtube_icon.svg);
 }
 
-.vk:hover {
-  width: 24px;
-  height: 14px;
-  background-image: url(../images/icons/vk_icon_hover.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  color: red;
+.vk:hover::before, .twitter:hover::before, .youtube:hover::before {
+  background-color: rgba(104, 162, 202, 1);
+}
+
+.vk:active::before, .twitter:active::before, .youtube:active::before {
+  background-color: rgba(104, 162, 202, 0.3);
 }
 
 .footer-wrapper {
@@ -1084,6 +1102,22 @@ body {
 .developer-link {
   display: block;
   margin: 40px 70px 30px auto;
+}
+
+.developer-image {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.developer-image:hover {
+  fill: rgba(117, 97, 87, 1);
+}
+
+.developer-image:focus-visible {
+  fill: rgba(117, 97, 87, 1);
+}
+
+.developer-image:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .current::before {
@@ -1150,7 +1184,7 @@ body {
   color: rgba(117, 97, 87, 1);
 }
 
-.phone-number:focus, .nav-link:focus {
+.phone-number:focus-visible, .nav-link:focus-visible {
   color: rgba(117, 97, 87, 1);
 }
 
@@ -1162,6 +1196,41 @@ body {
   border: 2px solid rgba(0, 0, 0, 1);
 }
 
-.view:focus {
-  border: 2px solid rgba(104, 162, 202, 1);
+.stars {
+  background-repeat: no-repeat;
+  background-position: 0 50%, 24px 50%, 48px 50%, 72px 50%, 96px 50%;
+}
+
+.stars-1 {
+  background-image: url(../images/star.svg);
+}
+
+.stars-2 {
+  background-image:
+  url(../images/star.svg),
+  url(../images/star.svg);
+}
+
+.stars-3 {
+  background-image:
+  url(../images/star.svg),
+  url(../images/star.svg),
+  url(../images/star.svg);
+}
+
+.stars-4 {
+  background-image:
+  url(../images/star.svg),
+  url(../images/star.svg),
+  url(../images/star.svg),
+  url(../images/star.svg);
+}
+
+.stars-5 {
+  background-image:
+  url(../images/star.svg),
+  url(../images/star.svg),
+  url(../images/star.svg),
+  url(../images/star.svg),
+  url(../images/star.svg);
 }
