@@ -294,10 +294,11 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  padding: 8px 0;
+  padding: 8px 20px;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+  /* overflow-wrap: break-word; */
 }
 
 .search-hotel {
@@ -308,7 +309,8 @@ body {
 }
 
 .subscribe-button {
-  width: 232px;
+  min-width: 232px;
+  max-width: 300px;
   background-color: rgba(130, 179, 211, 1);
   font-family: inherit;
   border: none;
@@ -756,11 +758,12 @@ body {
 }
 
 .subscribe-form input {
-  width: 452px;
+  min-width: 452px;
+  height: 100%;
   background-color: rgba(242, 242, 242, 1);
   border: none;
   border-radius: 4px 0 0 4px;
-  padding: 14px 0 14px 20px;
+  padding: 14px 20px;
   box-sizing: border-box;
 }
 
@@ -948,10 +951,11 @@ body {
   border-radius: 4px;
 }
 
-.cost-select-wrapper select:disabled {
+.cost-select-wrapper select:has(.cost-select-wrapper select:disabled) {
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   color: rgba(0, 0, 0, 0.3);
+
 }
 
 .hotel-view-list {
