@@ -1628,7 +1628,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   margin-top: 15px;
-  padding: 15px 18px 22px;
+  padding: 20px 20px 23px;
   border-radius: 10px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
@@ -1640,7 +1640,7 @@ body {
 .tooltip-text::before {
   content: "";
   display: block;
-  width: 14px;
+  width: 16px;
   height: 9px;
   position: absolute;
   background-image: url(../images/icons/tultiptext_icon.svg);

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <link href="styles/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+      <div class="modal modal-auth" data-test="modal">
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group calendar">
+              <label class="field-group-label" for="auth-date-one">Дата Заезда:</label>
+              <input class="auth-form-field field" type="text" id="auth-date-one" name="auth-date-one"
+                placeholder="Укажите дату" value="27 апреля 2020">
+              <span class="red">Мы не можем отправить вас в прошлое.</span>
+            </p>
+            <p class="field-group calendar">
+              <label class="field-group-label" for="auth-date-two">Дата Выезда:</label>
+              <input class="auth-form-field field" type="text" id="auth-date-two" name="auth-date-two"
+                placeholder="Укажите дату" value="1 сентября 2023">
+              <span>На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <div class="visitors-wrapper">
+              <p class="field-group-visitors">
+                <label class="field-group-label adults" for="adults">Взрослые:</label>
+                <button class="visitors-button button-minus" type="button">
+                  <span class="visually-hidden">Уменьшение количества взрослых</span>
+                </button>
+                <input class="auth-form-field field" type="text" id="adults" name="adults" placeholder="0" value="2">
+                <button class="visitors-button button-plus" type="button">
+                  <span class="visually-hidden">Увеличение количества взрослых</span>
+                </button>
+              </p>
+              <p class="field-group-visitors visitors-children">
+                <span class="field-group-label children-label">
+                  <label class="field-group-label children" for="children">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button">
+                      <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
+                        <circle cx="13" cy="13" r="13" />
+                        <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до
+                      18
+                      лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </span>
+                <button class="visitors-button button-minus" type="button">
+                  <span class="visually-hidden">Уменьшение количества детей</span>
+                </button>
+                <input class="auth-form-field field" type="text" id="children" name="children" placeholder="0"
+                  value="2">
+                <button class="visitors-button button-plus" type="button">
+                  <span class="visually-hidden">Увеличение количества детей</span>
+                </button>
+              </p>
+            </div>
+            <button class="search-hotel-button" type="submit">Найти</button>
+          </form>
+        </section>
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
+  </body>
