@@ -311,7 +311,6 @@ body {
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  /* overflow-wrap: break-word; */
 }
 
 .search-hotel {
@@ -600,7 +599,7 @@ body {
   bottom: 3px;
 }
 
-.want-here-button:hover,
+.want-here:hover,
 .search-hotel:hover,
 .details:hover {
   background-color: rgba(97, 80, 72, 1);
@@ -965,6 +964,8 @@ body {
   height: 20px;
   display: grid;
   grid-template-columns: 1fr;
+  padding-top: 4px;
+  box-sizing: border-box;
 }
 
 .range-slider-wrapper::before {
@@ -1387,19 +1388,19 @@ body {
 }
 
 .modal-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  padding: 60px 0;
 }
 
 .modal {
   position: relative;
   margin: auto;
-  margin-top: 396px;
   padding: 65px 70px;
   background-color: rgba(255, 255, 255, 1);
   border: none;
@@ -1422,12 +1423,18 @@ body {
   background-color: rgba(242, 242, 242, 1);
   border: none;
   border-radius: 50%;
-  background-image: url(../images/icons/close_icon.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.modal-close-button path {
+  fill: rgba(0, 0, 0, 1);
+}
+
+
 .modal-content h2 {
+  max-width: 475px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -1499,6 +1506,8 @@ body {
 
 .visitors-button {
   background-color: rgba(242, 242, 242, 1);
+  border: transparent;
+  box-sizing: border-box;
 }
 
 .button-minus {
@@ -1522,14 +1531,8 @@ body {
   align-items: center;
 }
 
-.button-plus::before {
-  content: "";
-  display: block;
-  width: 14px;
-  height: 14px;
-  background-image: url(../images/icons/plus_icon.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.button-plus path {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .visitors-wrapper {
@@ -1548,6 +1551,10 @@ body {
   display: grid;
   grid-template-columns: auto 39px 32px 39px;
   grid-template-rows: 48px;
+}
+
+.visitors-adults {
+  margin-right: 20px;
 }
 
 .visitors-children {
@@ -1570,8 +1577,8 @@ body {
 
 .children-label {
   position: relative;
-  max-width: 52px;
   display: flex;
+  gap: 10px;
 }
 
 .calendar::after {
@@ -1623,6 +1630,7 @@ body {
 .tooltip-text {
   position: absolute;
   width: 256px;
+  min-height: 143px;
   background-color: rgba(51, 51, 51, 1);
   color: rgba(255, 255, 255, 1);
   font-size: 16px;
@@ -1654,15 +1662,13 @@ body {
 }
 
 .tooltip {
-  position: absolute;
+  position: relative;
   width: 26px;
   height: 26px;
-  left: 59px;
-  top: 2px;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:focus-within + .tooltip-text {
   display: block;
 }
 
@@ -1672,10 +1678,33 @@ body {
 }
 
 .modal-close-button:hover,
-.visitors-button:hover,
-.modal-close-button:focus,
-.visitors-button:focus {
+.modal-close-button:focus {
   background-color: rgba(230, 230, 230, 1);
+}
+
+.modal-close-button:active {
+  background-color: rgba(230, 230, 230, 1);
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-button:active path {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.button-minus:hover::before, .button-minus:focus::before {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.button-minus:active::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.button-plus:hover path, .button-plus:focus path {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.button-plus:active path {
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 .search-hotel-button:hover,
@@ -1686,8 +1715,4 @@ body {
 .search-hotel-button:active {
   background-color: rgba(104, 162, 202, 1);
   color: rgba(255, 255, 255, 0.3);
-}
-
-.tooltip-toggle:hover .tooltip-icon {
-  fill: rgba(131, 179, 211, 1);
 }
