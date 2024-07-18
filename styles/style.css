@@ -412,6 +412,7 @@ body {
 .phone-number {
   font-size: 40px;
   line-height: 40px;
+  transition: 0.3s ease;
 }
 
 .catalog-title {
@@ -496,6 +497,7 @@ body {
   background-position: 94% 50%;
   appearance: none;
   box-sizing: border-box;
+  transition: 0.3s ease;
 }
 
 .hotel-gallery-item .rating {
@@ -1067,6 +1069,10 @@ body {
   flex-direction: column;
 }
 
+.form-buttons button {
+  transition: 0.3s ease;
+}
+
 .cost-select-wrapper {
   max-width: 1060px;
   display: flex;
@@ -1151,13 +1157,13 @@ body {
   display: block;
   margin: 0;
   grid-column: 1 / -1;
-  transition: 0.3s ease;
 }
 
 .image-link img {
   display: block;
   min-width: 100%;
   height: 100%;
+  transition: 0.3s ease;
 }
 
 .image-link:hover img, .image-link:focus img {
@@ -1200,6 +1206,7 @@ body {
   background-color: rgba(131, 179, 211, 1);
   mask-repeat: no-repeat;
   mask-position: 50% 50%;
+  transition: 0.3s ease;
 }
 
 .vk::before {
@@ -1264,6 +1271,7 @@ body {
 
 .developer-image {
   fill: rgba(0, 0, 0, 1);
+  transition: 0.3s ease;
 }
 
 .developer-image:hover {
@@ -1286,8 +1294,7 @@ body {
   bottom: 0;
 }
 
-.control-input,
-.control-input-radio {
+.control-input {
   appearance: none;
   margin: 0;
   min-width: 20px;
@@ -1349,6 +1356,10 @@ body {
 .phone-number:active,
 .nav-link:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.view {
+  transition: 0.3s ease;
 }
 
 .view:hover,
