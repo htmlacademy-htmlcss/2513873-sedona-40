@@ -103,7 +103,6 @@ body {
 
 .filter-wrapper {
   background-image: url("../images/background_filter.png");
-  margin-top: -6px;
   margin-bottom: 50px;
   padding: 70px;
   padding-top: 35px;
@@ -1008,7 +1007,7 @@ body {
   height: 20px;
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 3px;
+  padding-top: 4px;
   box-sizing: border-box;
 }
 
