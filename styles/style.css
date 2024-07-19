@@ -274,8 +274,9 @@ body {
 }
 
 .advantages h2 {
-  margin: 0;
-  margin-bottom: 25px;
+  min-width: 620px;
+  margin: 0 auto 25px;
+  text-align: center;
 }
 
 .services-title h2 {
@@ -744,7 +745,7 @@ body {
 }
 
 .advantages-title {
-  padding: 69px 290px 17px;
+  padding: 69px 260px 44px;
   margin-bottom: 21px;
   box-sizing: border-box;
 }
@@ -757,6 +758,7 @@ body {
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
+
 }
 
 .advantages-list {
