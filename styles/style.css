@@ -49,34 +49,38 @@ body {
 .logo {
   display: block;
   width: 140px;
+  margin-bottom: -6px;
 }
 
 .logo img {
-  display: inline-block;
   vertical-align: top;
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .logo:hover img, .logo:focus img {
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .logo:active img {
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 .hero {
   width: 1200px;
-  height: 485px;
+  min-height: 485px;
   background-color: rgba(164, 203, 227, 1);
   background-image: url("../images/background_mask.svg"), url("../images/background_hero.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 100%, 50% 50%;
   background-size: contain, cover;
   margin: 0;
-  margin-top: -6px;
   padding: 51px 371px 82px;
   box-sizing: border-box;
+}
+
+.hero img {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .subscribe,
@@ -90,6 +94,11 @@ body {
   background-color: rgba(164, 203, 227, 1);
   margin: 0;
   padding: 96px 258px 104px;
+}
+
+.subscribe {
+  min-height: 415px;
+  box-sizing: border-box;
 }
 
 .filter-wrapper {
@@ -194,7 +203,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   overflow-wrap: break-word;
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .details {
@@ -222,7 +231,7 @@ body {
 }
 
 .hotel-link {
-  transition: 0.3s ease;
+  transition-duration: 0.1s;
 }
 
 .hotel-link:hover, .hotel-link:focus {
@@ -360,7 +369,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .search-hotel {
@@ -368,6 +377,7 @@ body {
   width: 376px;
   background-color: rgba(117, 97, 87, 1);
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .subscribe-button {
@@ -410,9 +420,10 @@ body {
 }
 
 .phone-number {
+  max-width: 620px;
   font-size: 40px;
   line-height: 40px;
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .catalog-title {
@@ -489,15 +500,15 @@ body {
   line-height: 21px;
   display: block;
   min-width: 292px;
-  padding: 14px 40px 14px 20px;
+  min-height: 49px;
+  padding: 12px 40px 12px 20px;
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
   background-image: url("../images/icons/select_icon.svg");
   background-repeat: no-repeat;
-  background-position: 94% 50%;
+  background-position: right 20px top 21px;
   appearance: none;
-  box-sizing: border-box;
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .hotel-gallery-item .rating {
@@ -570,10 +581,10 @@ body {
 }
 
 .main-nav {
-  margin: 0 70px;
+  margin: 0;
+  padding: 0 70px;
   display: flex;
   gap: 30px;
-  padding: 0;
 }
 
 .nav-list {
@@ -610,7 +621,7 @@ body {
   bottom: 3px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .favority-link {
@@ -690,7 +701,7 @@ body {
   padding: 8px 0;
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .want-here:hover,
@@ -904,7 +915,7 @@ body {
   padding: 0 0 2px;
   margin: 3px 0;
   box-sizing: border-box;
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .page-home:hover, .page-home:focus {
@@ -1070,7 +1081,7 @@ body {
 }
 
 .form-buttons button {
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .cost-select-wrapper {
@@ -1206,7 +1217,7 @@ body {
   background-color: rgba(131, 179, 211, 1);
   mask-repeat: no-repeat;
   mask-position: 50% 50%;
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .vk::before {
@@ -1252,6 +1263,7 @@ body {
 }
 
 .social-list {
+  min-width: 142px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1260,7 +1272,7 @@ body {
 
 .contacts {
   padding: 5px 0;
-  margin-top: 6px;
+  margin: 40px auto 30px;
   text-align: center;
 }
 
@@ -1271,7 +1283,7 @@ body {
 
 .developer-image {
   fill: rgba(0, 0, 0, 1);
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .developer-image:hover {
@@ -1341,10 +1353,6 @@ body {
   pointer-events: none;
 }
 
-.nav-link {
-  transition: 0.3s ease;
-}
-
 .phone-number:hover,
 .nav-link:hover,
 .developer-link img:hover,
@@ -1359,7 +1367,7 @@ body {
 }
 
 .view {
-  transition: 0.3s ease;
+  transition-duration: 0.3s;
 }
 
 .view:hover,
@@ -1525,14 +1533,13 @@ body {
 .visitors-button {
   margin: 0;
   font-family: inherit;
-  border: none;
+  border: transparent;
   text-align: center;
 }
 
 .visitors-button {
   background-color: rgba(242, 242, 242, 1);
-  border: transparent;
-  box-sizing: border-box;
+  border: 1px solid transparent;
 }
 
 .button-minus {
@@ -1571,17 +1578,21 @@ body {
   grid-template-columns: auto 400px 40px;
 }
 
+.field-group-visitors input {
+  border: 2px solid transparent;
+}
+
 .field-group-visitors,
 .visitors-children {
   min-width: 247px;
   display: grid;
-  grid-template-columns: auto 39px 32px 39px;
+  grid-template-columns: auto 40px 30px 40px;
   grid-template-rows: 48px;
 }
 
 .visitors-children {
   min-width: 242px;
-  grid-template-columns: 1fr 39px 32px 39px;
+  grid-template-columns: 1fr 40px 30px 40px;
 }
 
 .visitors-adults {
