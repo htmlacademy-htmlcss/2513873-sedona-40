@@ -750,6 +750,7 @@ body {
 }
 
 .advantages-main-discription {
+  min-width: 651px;
   color: rgba(51, 51, 51, 1);
   font-size: 22px;
   line-height: 26px;
