@@ -230,9 +230,18 @@ body {
   padding: 0;
 }
 
+.nav-item {
+  min-height: 64px;
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .nav-item a {
-  display: block;
+  display: inline-block;
   padding: 20px 16px;
+  position: relative;
 }
 
 .hotel-link {
@@ -246,13 +255,6 @@ body {
 
 .hotel-link:active {
   color: rgba(117, 97, 87, 0.3);
-}
-
-.nav-item {
-  position: relative;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
 }
 
 .advantages h2,
@@ -630,6 +632,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .visually-hidden {
@@ -638,15 +641,13 @@ body {
 }
 
 .user-menu-link {
-  height: 64px;
+  min-height: 60px;
   display: block;
   padding: 22px 12px;
   box-sizing: border-box;
   position: relative;
-  bottom: 3px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  transition-duration: 0.3s;
 }
 
 .favority-link {
@@ -698,7 +699,7 @@ body {
 }
 
 .want-here-button {
-  width: 160px;
+  min-width: 160px;
   margin: 14px 0 14px 20px;
   background-color: rgba(117, 97, 87, 1);
   font-family: inherit;
@@ -709,8 +710,6 @@ body {
   border: none;
   border-radius: 4px;
   text-align: center;
-  position: relative;
-  bottom: 3px;
 }
 
 .want-here {
@@ -1409,10 +1408,6 @@ body {
 
 /* +++++++++++++++++++++++++++++ МОДАЛЬНОЕ ОКНО ++++++++++++++++++++++++++++++++++++ */
 
-.page-container .modal-container-close {
-  display: none;
-}
-
 .modal-container {
   position: fixed;
   top: 0;
@@ -1422,6 +1417,10 @@ body {
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
   padding: 60px 0;
+}
+
+.modal-container-close {
+  display: none;
 }
 
 .modal {
